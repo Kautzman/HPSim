@@ -8,7 +8,7 @@ namespace BadSimCraft
 {
     class Empower : BuffSpell
     {
-        public Empower() : base(0, new EmpowerBuff(), 0)
+        public Empower(Player player) : base(new EmpowerBuff(), new SingleTarget(player), 0, 0)
         {
 
         }

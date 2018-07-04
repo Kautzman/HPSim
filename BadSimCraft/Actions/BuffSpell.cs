@@ -8,11 +8,18 @@ namespace BadSimCraft
 {
     abstract class BuffSpell : Spell
     {
-        public BuffSpell(TargetingStrategy thisTargetingStrategy, int thisCastTime, int thisCooldownDuration = 0,
+
+        Buff buff;
+        public BuffSpell(Buff thisBuff, TargetingStrategy thisTargetingStrategy, int thisCastTime, int thisCooldownDuration = 0,
             bool thisIsOnGCD = true, bool thisIsCooldownModifiedByHaste = false) :
             base (thisTargetingStrategy, thisCastTime, thisCooldownDuration, thisIsOnGCD, thisIsCooldownModifiedByHaste)
         {
+            buff = thisBuff;
+        }
 
+        public override List<Effect> GetEffects(Player player)
+        {
+            return new List<Effect>() { new BuffEffect(this, buff) };
         }
     }
 }

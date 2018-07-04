@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class LivingBombDot : BuffEffect
+    class LivingBombDot : Buff
     {
         // Is this the Og living bomb, or the spread?
         bool isPrimary;

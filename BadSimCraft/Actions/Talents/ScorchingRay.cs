@@ -8,7 +8,7 @@ namespace BadSimCraft
 {
     class ScorchingRay : DamagingSpell
     {
-        public ScorchingRay() : base(1500, -20, 900, 8000, true)
+        public ScorchingRay(Player target) : base(new SingleTarget(target), 1.0f, 1500, -20, 900, 8000, true)
         {
 
         }

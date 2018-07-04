@@ -76,9 +76,9 @@ namespace BadSimCraft
                     player.Take(new ScorchingRay());
                     //playerActionText = "Casting Scorching Ray";
                 }
-                else if (player.heat > 75 && !player.isOnCooldown<RuneofFire>())
+                else if (player.heat > 75 && !player.isOnCooldown<RuneOfFire>())
                 {
-                    player.Take(new RuneofFire());
+                    player.Take(new RuneOfFire());
                     //playerActionText = "Casting Rune Of Fire";
                 }
                 else

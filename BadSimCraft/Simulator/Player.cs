@@ -127,7 +127,7 @@ namespace BadSimCraft
             return actions.OfType<T>().ToList().Any();
         }
 
-        public int hasBuffCount<T>() where T : Spell
+        public int hasBuffCount<T>() where T : Buff
         {
             return actions.OfType<T>().ToList().Count();
         }

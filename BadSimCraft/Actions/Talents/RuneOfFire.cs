@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class RuneofFire : BuffSpell
+    class RuneOfFire : BuffSpell
     {
-        public RuneofFire() : base(1000, new RuneofFireBuff(), 60000)
+        public RuneOfFire(Player player) : base(new RuneofFireBuff(), new SingleTarget(player), 1000, 60000)
         {
 
         }

@@ -17,9 +17,16 @@ namespace BadSimCraft
         public int totalDmg { get; set; }
         public string critMarker { get; set; }
 
-        public DamagingSpell(TargetingStrategy thisTargetingStrategy, float thisSpellDamageCoefficient, int thisCastTime, int thisHeat,
-            int thisBaseDmg, int thisCooldownDuration = 0, bool thisIsCooldownModifiedByHaste = false, bool thisIsOnGCD = true)
-            : base(thisTargetingStrategy, thisCastTime, thisCooldownDuration, thisIsOnGCD, thisIsCooldownModifiedByHaste)
+        public DamagingSpell(
+            TargetingStrategy thisTargetingStrategy,
+            float thisSpellDamageCoefficient,
+            int thisCastTime,
+            int thisHeat,
+            int thisBaseDmg,
+            int thisCooldownDuration = 0,
+            bool thisIsCooldownModifiedByHaste = false,
+            bool thisIsOnGCD = true
+            ) : base(thisTargetingStrategy, thisCastTime, thisCooldownDuration, thisIsOnGCD, thisIsCooldownModifiedByHaste)
         {
             spellDamageCoefficient = thisSpellDamageCoefficient;
             baseDmg = thisBaseDmg;

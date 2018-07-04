@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    abstract class BuffEffect : Effect
+    class BuffEffect : Effect
     {
         Buff buff;
 

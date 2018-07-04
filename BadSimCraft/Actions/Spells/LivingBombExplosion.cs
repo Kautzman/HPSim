@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class LivingBombExplosion : DamageEffect
+    class LivingBombExplosion : DamagingEffect
     {
         public LivingBombExplosion() : base(0, 40, 1500, 0, false)
         {

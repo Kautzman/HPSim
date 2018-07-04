@@ -8,7 +8,7 @@ namespace BadSimCraft
 {
     class Enlighten : Action
     {
-        public Enlighten() : base(0, 0, false)
+        public Enlighten() : base(null)
         {
 
         }

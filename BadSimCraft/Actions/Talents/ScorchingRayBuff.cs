@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class ScorchingRayEffect : BuffEffect
+    class ScorchingRayEffect : Buff
     {
 
         public ScorchingRayEffect() : base(10000)

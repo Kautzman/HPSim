@@ -15,7 +15,7 @@ namespace BadSimCraft
         public override void OnStart(Player player)
         {
             base.OnStart(player);
-            player.Take(new FirebugEffect());
+            player.Take(new FirebugBuff());
         }
     }
 }

@@ -15,7 +15,7 @@ namespace BadSimCraft
             target = thisTarget;
         }
 
-        public override List<Player> GetTargets()
+        public List<Player> GetTargets()
         {
             return new List<Player> { target };
         }

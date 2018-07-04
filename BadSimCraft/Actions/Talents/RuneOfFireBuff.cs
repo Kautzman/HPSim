@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class RuneofFireEffect : BuffEffect
+    class RuneofFireBuff : Buff
     {
         int timeElapsed = 0;
         int heatInterval = 50;
 
-        public RuneofFireEffect() : base(10000)
+        public RuneofFireBuff() : base(10000)
         {
 
         }

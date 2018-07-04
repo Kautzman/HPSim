@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class OverheatEffect : Buff
+    class FirebugBuff : Buff
     {
-        public OverheatEffect() : base()
+        public FirebugBuff() : base()
         {
 
         }

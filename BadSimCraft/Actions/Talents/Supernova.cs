@@ -14,9 +14,9 @@ namespace BadSimCraft
         }
         public override void Update(int timePassed, Player player)
         {
-            if(player.heat >= 100 && !player.hasBuff<SupernovaEffect>())
+            if(player.heat >= 100 && !player.hasBuff<SuperNovaBuff>())
             {
-                player.Take(new SupernovaEffect());
+                player.Take(new SuperNovaBuff());
             }
         }
 

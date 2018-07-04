@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class EnhanceEffect : BuffSpell
+    class OverheatBuff : Buff
     {
-        public EnhanceEffect() : base(null)
+        public OverheatBuff() : base()
         {
 
         }

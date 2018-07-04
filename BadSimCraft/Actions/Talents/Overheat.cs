@@ -16,7 +16,7 @@ namespace BadSimCraft
         {
             base.OnStart(player);
             player.actions.RemoveWhere(action => action.GetType() == typeof(Supernova));
-            player.Take(new OverheatEffect());
+            player.Take(new OverheatBuff());
         }
     }
 }

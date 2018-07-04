@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class BuffSpell : Spell
+    abstract class BuffSpell : Spell
     {
+        public BuffSpell(TargetingStrategy thisTargetingStrategy, int thisCastTime, int thisCooldownDuration = 0,
+            bool thisIsOnGCD = true, bool thisIsCooldownModifiedByHaste = false) :
+            base (thisTargetingStrategy, thisCastTime, thisCooldownDuration, thisIsOnGCD, thisIsCooldownModifiedByHaste)
+        {
 
+        }
     }
 }

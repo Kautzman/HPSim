@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    public class Spell : TargetedAction
+    public abstract class Spell : TargetedAction
     {
         bool isOnGCD;
 
@@ -55,13 +55,12 @@ namespace BadSimCraft
         public override void OnFinish(Player player)
         {
             // Give resources, if any
-            player.heat += ComputeHeatCost(player);
+            // player.heat += ComputeHeatCost(player);
 
             // Heat specific stuff...
-            if (!player.hasBuff<OverheatEffect>())
-                player.heat = Util.Clamp(player.heat, 0, 100);
+            // if (!player.hasBuff<OverheatEffect>())
+            //    player.heat = Util.Clamp(player.heat, 0, 100);
 
-            player.Take(buffEffect);
             base.OnFinish(player);
         }
     }

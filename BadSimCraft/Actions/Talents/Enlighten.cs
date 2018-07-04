@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class Enlighten : BuffSpel
+    class Enlighten : Action
     {
-        public Enlighten() : base(0, new EnlightenEffect(), 0)
+        public Enlighten() : base(0, 0, false)
         {
 
         }

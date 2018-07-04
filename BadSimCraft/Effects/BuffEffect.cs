@@ -8,9 +8,16 @@ namespace BadSimCraft
 {
     abstract class BuffEffect : Effect
     {
-        public BuffEffect(int? thisDuration = null) : base (thisDuration)
-        {
+        Buff buff;
 
+        public BuffEffect(Action thisSource, Buff thisBuff) : base (thisSource)
+        {
+            buff = thisBuff;
+        }
+
+        public override void Apply(Player target)
+        {
+            target.Take(buff);
         }
     }
 }

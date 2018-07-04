@@ -8,7 +8,7 @@ namespace BadSimCraft
 {
     class RuneofFire : BuffSpell
     {
-        public RuneofFire() : base(1000, new RuneofFireEffect(), 60000)
+        public RuneofFire() : base(1000, new RuneofFireBuff(), 60000)
         {
 
         }

@@ -24,3 +24,9 @@ C:\Users\Kautzman\Documents\Visual Studio 2017\Projects\BadSimCraft - Copy\BadSi
 C:\Users\Kautzman\Documents\Visual Studio 2017\Projects\BadSimCraft - Copy\BadSimCraft\obj\Debug\BadSimCraft_MarkupCompile.lref
 C:\Users\Kautzman\Documents\Visual Studio 2017\Projects\BadSimCraft - Copy\BadSimCraft\obj\Debug\BadSimCraft.exe
 C:\Users\Kautzman\Documents\Visual Studio 2017\Projects\BadSimCraft - Copy\BadSimCraft\obj\Debug\BadSimCraft.pdb
+C:\Users\Kautzman\Documents\GitHub\HPSim\BadSimCraft\obj\Debug\BadSimCraft.csprojResolveAssemblyReference.cache
+C:\Users\Kautzman\Documents\GitHub\HPSim\BadSimCraft\obj\Debug\GUI\HealerWindow.g.cs
+C:\Users\Kautzman\Documents\GitHub\HPSim\BadSimCraft\obj\Debug\GUI\MainWindow.g.cs
+C:\Users\Kautzman\Documents\GitHub\HPSim\BadSimCraft\obj\Debug\App.g.cs
+C:\Users\Kautzman\Documents\GitHub\HPSim\BadSimCraft\obj\Debug\BadSimCraft_MarkupCompile.cache
+C:\Users\Kautzman\Documents\GitHub\HPSim\BadSimCraft\obj\Debug\BadSimCraft_MarkupCompile.lref

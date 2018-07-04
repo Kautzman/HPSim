@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class EmpowerEffect : BuffEffect
+    class PyromaniacBuff : Buff
     {
-        public EmpowerEffect() : base(10000)
+        public PyromaniacBuff() : base()
         {
 
         }

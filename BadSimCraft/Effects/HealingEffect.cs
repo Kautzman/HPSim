@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft.Effects
 {
-    class HealingEffect : Effect
+    class HealingEffect : DamagingEffect
     {
+        public HealingEffect(Action thisSource, int thisHealingValue) : base (thisSource, thisHealingValue * -1)
+        {
+
+        }
     }
 }

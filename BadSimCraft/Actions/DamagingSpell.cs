@@ -30,7 +30,7 @@ namespace BadSimCraft
         public virtual int ComputeHeatCost(Player player)
         {
             // We don't charge more heat for Spenders in Overheat.
-            if(player.hasBuff<OverheatEffect>() && heat > 0)
+            if(player.hasBuff<OverheatBuff>() && heat > 0)
             {
                 return (int)(heat * 1.2);
             }
@@ -88,7 +88,7 @@ namespace BadSimCraft
 
             // TALENT: Firebug
 
-            if (this.GetType() == typeof(Fireball) && player.hasBuff<FirebugEffect>())
+            if (this.GetType() == typeof(Fireball) && player.hasBuff<FirebugBuff>())
             {
                 heatMasteryMod = 400 * (1 / (1 + (player.mastery * 1.5f)));
             }
@@ -99,41 +99,37 @@ namespace BadSimCraft
 
             baseDmg = (int)(baseDmg * (1 + ((float)player.heat / heatMasteryMod)));
 
-
-
-
             /***********
              * TALENTS (Most of them anyway) 
              ***********/
-
 
             // Pryomaniac
 
             if (this.GetType() == typeof(Pyroblast))
             {
-                baseDmg = (int)(baseDmg * (1 + ((player.actions.OfType<PyromaniacEffect>().ToList().Count()) * 0.10)));
+                baseDmg = (int)(baseDmg * (1 + ((player.actions.OfType<PyromaniacBuff>().ToList().Count()) * 0.10)));
             }
 
             // Empower
 
             if (this.GetType() == typeof(Scorch) || this.GetType() == typeof(Fireball) || this.GetType() == typeof(Pyroblast))
             {
-                baseDmg = (int)(baseDmg * (1 + ((player.actions.OfType<EmpowerEffect>().ToList().Count()) * 0.15)));
-                player.actions.RemoveWhere(action => action.GetType() == typeof(EmpowerEffect));
+                baseDmg = (int)(baseDmg * (1 + ((player.actions.OfType<EmpowerBuff>().ToList().Count()) * 0.15)));
+                player.actions.RemoveWhere(action => action.GetType() == typeof(EmpowerBuff));
             }
 
             // Enlighten
 
             if (this.GetType() == typeof(Scorch) || this.GetType() == typeof(Fireball))
             {
-                baseDmg = (int)(baseDmg * (1 + ((player.actions.OfType<EnlightenEffect>().ToList().Count()) * 0.08)));
+                baseDmg = (int)(baseDmg * (1 + ((player.actions.OfType<EnlightenBuff>().ToList().Count()) * 0.08)));
             }
 
             // Incantor's Flow
 
-            if (player.hasBuff<IncantorsFlowEffect>())
+            if (player.hasBuff<IncantorsFlowBuff>())
             {
-                baseDmg = (int)(baseDmg * (1 + (0.04 * player.actions.OfType<IncantorsFlowEffect>().FirstOrDefault().stacks)));
+                baseDmg = (int)(baseDmg * (1 + (0.04 * player.actions.OfType<IncantorsFlowBuff>().FirstOrDefault().stacks)));
             }
 
             totalDmg = baseDmg;

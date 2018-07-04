@@ -8,9 +8,14 @@ namespace BadSimCraft
 {
     class Combustion : BuffSpell
     {
-        public Combustion() : base(0, new CombustionEffect(), 120000)
+        public Combustion(Player player) : base(new SingleTarget(player), 0, 120000)
         {
 
+        }
+
+        public override List<Effect> GetEffects(Player player)
+        {
+            return new List<Effect> { new CombustionBuff() };
         }
     }
 }

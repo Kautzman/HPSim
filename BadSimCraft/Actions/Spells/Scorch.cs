@@ -15,7 +15,7 @@ namespace BadSimCraft
 
         public override int CalculateDamage(Player player)
         {
-            if (player.hasBuff<SupernovaEffect>())
+            if (player.hasBuff<SuperNovaBuff>())
             {
                 float playerBaseCrit = player.crit;
 
@@ -33,9 +33,9 @@ namespace BadSimCraft
         {
             base.OnFinish(player);
 
-            if (player.hasBuff<EnhanceTalent>() && player.hasBuffCount<EnhanceEffect>() < 20)
+            if (player.hasBuff<EnhanceTalent>() && player.hasBuffCount<EnhanceBuff>() < 20)
             {
-                player.Take(new EnhanceEffect());
+                player.Take(new EnhanceBuff());
             }
 
         }

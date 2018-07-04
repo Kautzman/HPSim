@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class EnlightenEffect : BuffEffect
+    class EnlightenBuff : Buff
     {
-        public EnlightenEffect() : base(8000)
+        public EnlightenBuff() : base(8000)
         {
 
         }

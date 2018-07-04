@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class FirebugEffect : BuffEffect
+    class EmpowerBuff : Buff
     {
-        public FirebugEffect() : base()
+        public EmpowerBuff() : base(10000)
         {
 
         }

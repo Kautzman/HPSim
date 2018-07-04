@@ -50,8 +50,8 @@ namespace BadSimCraft
 
             if (!player.isGlobalCoolDown() && !player.IsCasting())
             {
-                if ((player.heat >= 35 && player.hasBuffCount<EnlightenEffect>() < 2)
-                    || (player.heat >= 35 && player.remainingDuration<EnlightenEffect>() < 2000))
+                if ((player.heat >= 35 && player.hasBuffCount<EnlightenBuff>() < 2)
+                    || (player.heat >= 35 && player.remainingDuration<EnlightenBuff>() < 2000))
                 {
                     player.Take(new Pyroblast());
                     //playerActionText = "Casting Pyroblast";
@@ -61,12 +61,12 @@ namespace BadSimCraft
                     player.Take(new LivingBomb());
                     //playerActionText = "Casting Living Bomb";
                 }
-                else if (player.hasBuff<SupernovaEffect>())
+                else if (player.hasBuff<SuperNovaBuff>())
                 {
                     player.Take(new Scorch());
                     //playerActionText = "Casting Scorch";
                 }
-                else if (!player.isOnCooldown<Meteor>() && player.heat >= 80 && player.hasBuffCount<EnhanceEffect>() == 20)
+                else if (!player.isOnCooldown<Meteor>() && player.heat >= 80 && player.hasBuffCount<EnhanceBuff>() == 20)
                 {
                     player.Take(new Meteor());
                     //playerActionText = "Casting Meteor";
@@ -96,7 +96,7 @@ namespace BadSimCraft
                 }
             }
 
-            if (player.hasBuff<SupernovaEffect>() && player.heat <= 50 && !player.isOnCooldown<Fireblast>())
+            if (player.hasBuff<SuperNovaBuff>() && player.heat <= 50 && !player.isOnCooldown<Fireblast>())
             {
                 player.Take(new Fireblast());
                 //playerActionText = "Casting Fireblast";

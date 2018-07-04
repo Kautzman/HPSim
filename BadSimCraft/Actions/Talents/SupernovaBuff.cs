@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    public class SupernovaEffect : BuffEffect
+    public class SuperNovaBuff : Buff
     {
         int timeElapsed = 0;
         readonly int heatInterval = 60;

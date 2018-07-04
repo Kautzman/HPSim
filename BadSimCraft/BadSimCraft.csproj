@@ -67,7 +67,6 @@
     <Compile Include="Simulator\Boss.cs" />
     <Compile Include="Actions\Buff.cs" />
     <Compile Include="Effects\BuffEffect.cs" />
-    <Compile Include="Actions\Castable.cs" />
     <Compile Include="Simulator\DamageEvent.cs" />
     <Compile Include="Actions\DamagingSpell.cs" />
     <Compile Include="GUI\HealerWindow.xaml.cs">

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class EnhanceTalent : BuffSpell
+    class EnhanceTalent : Buff
     {
         public EnhanceTalent() : base(null)
         {

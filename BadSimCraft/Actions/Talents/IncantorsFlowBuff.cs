@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft 
 {
-    class IncantorsFlowEffect : BuffEffect
+    class IncantorsFlowBuff : Buff
     {
         int clock = 0;
         public int stacks = 1;
         bool climbing = true;
 
-        public IncantorsFlowEffect() : base()
+        public IncantorsFlowBuff() : base()
         {
 
         }

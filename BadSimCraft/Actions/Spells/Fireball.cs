@@ -22,7 +22,7 @@ namespace BadSimCraft
         // Any damage mods would go here.
         public override float ComputeDamageMultiplier(Player player)
         {
-            if (this.GetType() == typeof(Fireball) && player.hasBuff<FirebugEffect>())
+            if (this.GetType() == typeof(Fireball) && player.hasBuff<FirebugBuff>())
             {
                 heatMasteryMod = 400 * (1 / (1 + (player.mastery * 1.5f)));
             }
@@ -40,9 +40,9 @@ namespace BadSimCraft
         {
             base.OnFinish(player);
 
-            if (player.hasBuff<EnhanceTalent>() && player.hasBuffCount<EnhanceEffect>() < 20)
+            if (player.hasBuff<EnhanceTalent>() && player.hasBuffCount<EnhanceBuff>() < 20)
             {
-                player.Take(new EnhanceEffect());
+                player.Take(new EnhanceBuff());
             }
         }
     }

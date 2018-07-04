@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    abstract class BuffEffect : Effect
+    static class Util
     {
-        public BuffEffect(int? thisDuration = null) : base (thisDuration)
+        public static int Clamp(int n, int l, int h)
         {
-
+            return (n > h ? h : (n < l ? l : n));
         }
     }
 }

@@ -29,6 +29,7 @@ namespace BadSimCraft
         public float mastery { get; set; }
         public float crit { get; set; }
         public float haste { get; set; }
+        public float spellDamage { get; set; }
 
         public HashSet<Action> actions = new HashSet<Action>();
 
@@ -39,6 +40,7 @@ namespace BadSimCraft
             haste = 0.2f;
             mastery = 0.2f;
             crit = 0.2f;
+            spellDamage = 180;
         }
 
         public void SetPassives()
@@ -120,7 +122,7 @@ namespace BadSimCraft
             return actions.OfType<Cooldown<T>>().ToList().Any();
         }
 
-        public bool hasBuff<T>() where T : Spell
+        public bool hasBuff<T>() where T : Buff
         {
             return actions.OfType<T>().ToList().Any();
         }

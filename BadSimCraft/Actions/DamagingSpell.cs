@@ -8,23 +8,25 @@ namespace BadSimCraft
 {
     public abstract class DamagingSpell : Spell
     {
-        TargetingStrategy targetingStrategy;
-
         Random random = new Random(Guid.NewGuid().GetHashCode());
         public int heat { get; set; }
         public float heatMasteryMod { get; set; } = 400f;
         public int baseDmg { get; set; }
+        public float spellDamageCoefficient;
 
         public int totalDmg { get; set; }
         public string critMarker { get; set; }
 
-        public DamagingSpell(TargetingStrategy thisTargetingStrategy, int thisCastTime, int thisHeat, int thisBaseDmg, int thisCooldownDuration = 0, bool thisIsCooldownModifiedByHaste = false, bool thisIsOnGCD = true) : base(thisCastTime, thisCooldownDuration, thisIsOnGCD, thisIsCooldownModifiedByHaste)
+        public DamagingSpell(TargetingStrategy thisTargetingStrategy, float thisSpellDamageCoefficient, int thisCastTime, int thisHeat,
+            int thisBaseDmg, int thisCooldownDuration = 0, bool thisIsCooldownModifiedByHaste = false, bool thisIsOnGCD = true)
+            : base(thisTargetingStrategy, thisCastTime, thisCooldownDuration, thisIsOnGCD, thisIsCooldownModifiedByHaste)
         {
-            targetingStrategy = thisTargetingStrategy;
+            spellDamageCoefficient = thisSpellDamageCoefficient;
             baseDmg = thisBaseDmg;
             heat = thisHeat;
         }
 
+        // TODO: Get rid of this...
         public virtual int ComputeHeatCost(Player player)
         {
             // We don't charge more heat for Spenders in Overheat.
@@ -35,32 +37,31 @@ namespace BadSimCraft
             return heat;
         }
 
-        public override void OnFinish(Player player)
+        public virtual float GetCritChance(Player player)
         {
-            List<Player> allTargets = targetingStrategy.GetTargets();
-
-            // Give resources, if any
-            player.heat += ComputeHeatCost(player);
-
-            // Heat specific stuff...
-            if (!player.hasBuff<OverheatEffect>())
-                player.heat = Clamp(player.heat, 0, 100);
-
-            // Apply damage to any targets
-            foreach (Player target in allTargets)
-            {
-                target.damageTaken += CalculateDamage(player);
-            }
-
-            base.OnFinish(player);
-
-            //player.outputBuffer = $"{critMarker}{totalDmg}, heat = {ComputeHeatCost(player)}";
+            return player.crit;
         }
 
-        public int Clamp(int n, int l, int h)
+        public override List<Effect> GetEffects(Player player)
         {
-            return (n > h ? h : (n < l ? l : n));
+            return new List<Effect>() { new DamagingEffect(this, CalculateDamage(player)) };
         }
+
+        public virtual float ComputeDamageMultiplier(Player player)
+        {
+            return 1;
+        }
+
+        public virtual float GetSpellDamageModifier(Player player)
+        {
+            return player.spellDamage * GetSpellDamageCoefficient();
+        }
+
+        public virtual float GetSpellDamageCoefficient()
+        {
+            return spellDamageCoefficient;
+        }
+
         public virtual int CalculateDamage(Player player)
         {
             critMarker = "";

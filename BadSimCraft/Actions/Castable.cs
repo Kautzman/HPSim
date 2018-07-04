@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
+    // TODO: Is this a dead class?
     abstract class Castable : Action
     {
         bool isOnGCD;

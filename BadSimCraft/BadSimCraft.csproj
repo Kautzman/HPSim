@@ -61,7 +61,7 @@
     <Compile Include="Actions\TargetingStrategies\TargetableSpell.cs" />
     <Compile Include="Actions\TargetingStrategies\Targeted.cs" />
     <Compile Include="Actions\TargetingStrategies\TargetingStrategy.cs" />
-    <Compile Include="Effects\DamageEffect.cs" />
+    <Compile Include="Effects\DamagingEffect.cs" />
     <Compile Include="Effects\Effect.cs" />
     <Compile Include="Effects\HealingEffect.cs" />
     <Compile Include="Simulator\Boss.cs" />
@@ -115,6 +115,7 @@
     <Compile Include="Actions\Talents\Supernova.cs" />
     <Compile Include="Actions\Talents\SupernovaEffect.cs" />
     <Compile Include="Actions\TargetedAction.cs" />
+    <Compile Include="Utilities\Util.cs" />
     <Page Include="GUI\HealerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

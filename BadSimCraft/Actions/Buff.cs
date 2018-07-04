@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    public abstract class Buff : Action
+    public abstract class Buff : TargetedAction
     {
         public Buff(TargetingStrategy thisTargetingStrategy, int? thisDuration = null) : base (thisDuration)
         {

@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    class Effect
+    public abstract class Effect
     {
+        public Action source;
+
+        public Effect(Action thisSource)
+        {
+            source = thisSource;
+        }
+
+        public abstract void Apply(Player target);
     }
 }

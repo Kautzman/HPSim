@@ -15,40 +15,109 @@
                         <Border DockPanel.Dock="Left" BorderBrush="Red" BorderThickness="1">
                             <Grid Width="300" HorizontalAlignment="Left">
                                 <Label>Healer</Label>
-                                <Label Margin="0, 30, 0, 0" Width="40" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">HP:</Label>
-                                <Label Margin="0, 50, 0, 0" Width="40" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">MP:</Label>
-                                <Label Margin="0, 70, 0, 0" Width="40" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">MP/5:</Label>
+                                <Label Margin="0, 30, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">HP:</Label>
+                                <Label Margin="0, 50, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">MP:</Label>
+                                <Label Margin="0, 70, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">MP/5:</Label>
+                                <Label Margin="0, 90, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Haste:</Label>
+                                <Label Margin="0, 110, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Mastery:</Label>
+                                <Label Margin="0, 130, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Crit:</Label>
+                                <Label Margin="0, 150, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Spell Power:</Label>
+                                <Label Margin="0, 170, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Armor:</Label>
 
-                                <TextBox Margin="50, 35, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_HP_TextBox"/>
-                                <TextBox Margin="50, 55, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_MP_TextBox"/>
-                                <TextBox Margin="50, 75, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_MPRegen_TextBox"/>
+                                <TextBox Margin="80, 35, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_HP_TextBox"/>
+                                <TextBox Margin="80, 55, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_MP_TextBox" Text="100000"/>
+                                <TextBox Margin="80, 75, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_MPRegen_TextBox"/>
+                                <TextBox Margin="80, 95, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_Haste"/>
+                                <TextBox Margin="80, 115, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_Mastery"/>
+                                <TextBox Margin="80, 135, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_Crit"/>
+                                <TextBox Margin="80, 155, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_SpellPower"/>
+                                <TextBox Margin="80, 175, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Healer_Armor"/>
+
+                                <Label Margin="0, 90, 0, 65" Width="120" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Character Template</Label>
+                                <Label Margin="0, 90, 0, 40" Width="120" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Combat Strategy</Label>
+                                
+                                <ComboBox Margin="120, 0, 0, 70" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name="Healer_LoadoutTemplate_ComboBox" />
+                                <ComboBox Margin="120, 0, 0, 45" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name="Healer_CombatStrategy_ComboBox" />
+
+                                <Button Margin="0, 0, 0, 10" Width="130" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Center" Name="Healer_LoadFromArmory_Button" Content="Load From Armory..."/>
                             </Grid>
                         </Border>
                         
                         <Border DockPanel.Dock="Left" BorderBrush="Blue" BorderThickness="1">
                             <Grid Width="300" HorizontalAlignment="Left">
                                 <Label>Tank</Label>
+
+                                <Label Margin="0, 30, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">HP:</Label>
+                                <Label Margin="0, 50, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Armor:</Label>
+                                <Label Margin="0, 70, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Block:</Label>
+                                <Label Margin="0, 90, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Dodge:</Label>
+
+                                <TextBox Margin="80, 35, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Tank_HP_TextBox"/>
+                                <TextBox Margin="80, 55, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Tank_Armor_TextBox"/>
+                                <TextBox Margin="80, 75, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Tank_Block_TextBox"/>
+                                <TextBox Margin="80, 95, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="Tank_Dodge_TextBox"/>
+
+                                <Label Margin="0, 90, 0, 45" Width="120" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Character Template</Label>
+                                <ComboBox Margin="120, 0, 0, 50" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name="Tank_LoadoutTemplate_ComboBox" />
+
+                                <Button Margin="0, 0, 0, 10" Width="130" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Center" Name="Tank_LoadFromArmory_Button" Content="Load From Armory..."/>
                             </Grid>
                         </Border>
 
                         <Border DockPanel.Dock="Left" BorderBrush="Green" BorderThickness="1">
                             <Grid Width="300" HorizontalAlignment="Left">
                                 <Label>DPS1</Label>
+
+                                <Label Margin="0, 30, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">HP:</Label>
+                                <Label Margin="0, 50, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Armor:</Label>
+                                
+                                <TextBox Margin="80, 35, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="DPS1_HP_TextBox"/>
+                                <TextBox Margin="80, 55, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="DPS1_Armor_TextBox"/>
+
+                                <Label Margin="0, 90, 0, 45" Width="120" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Character Template</Label>
+                                <ComboBox Margin="120, 0, 0, 50" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name="DPS1_LoadoutTemplate_ComboBox" />
+
+                                <Button Margin="0, 0, 0, 10" Width="130" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Center" Name="DPS1_LoadFromArmory_Button" Content="Load From Armory..."/>
                             </Grid>
                         </Border>
 
                         <Border DockPanel.Dock="Left" BorderBrush="Green" BorderThickness="1">
                             <Grid Width="300" HorizontalAlignment="Left">
                                 <Label>DPS2</Label>
+
+                                <Label Margin="0, 30, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">HP:</Label>
+                                <Label Margin="0, 50, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Armor:</Label>
+
+                                <TextBox Margin="80, 35, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="DPS2_HP_TextBox"/>
+                                <TextBox Margin="80, 55, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="DPS2_Armor_TextBox"/>
+
+                                <Label Margin="0, 90, 0, 45" Width="120" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Character Template</Label>
+                                <ComboBox Margin="120, 0, 0, 50" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name="DPS2_LoadoutTemplate_ComboBox" />
+
+                                <Button Margin="0, 0, 0, 10" Width="130" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Center" Name="DPS2_LoadFromArmory_Button" Content="Load From Armory..."/>
                             </Grid>
                         </Border>
 
                         <Border DockPanel.Dock="Left" BorderBrush="Green" BorderThickness="1">
-                            <Grid Width="300" HorizontalAlignment="Left">
+                            <Grid Width="280" HorizontalAlignment="Left">
                                 <Label>DPS3</Label>
+
+                                <Label Margin="0, 30, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">HP:</Label>
+                                <Label Margin="0, 50, 0, 0" Width="75" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Armor:</Label>
+
+                                <TextBox Margin="80, 35, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="DPS3_HP_TextBox"/>
+                                <TextBox Margin="80, 55, 0, 0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Name="DPS3_Armor_TextBox"/>
+
+                                <Label Margin="0, 90, 0, 45" Width="120" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Right">Character Template</Label>
+                                <ComboBox Margin="120, 0, 0, 50" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name="DPS3_LoadoutTemplate_ComboBox" />
+
+                                <Button Margin="0, 0, 0, 10" Width="130" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Center" Name="DPS3_LoadFromArmory_Button" Content="Load From Armory..."/>
                             </Grid>
                         </Border>
                     </DockPanel>
+
+                    <Button Margin="0, 0, 0, 10" Width="150" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Center" Name="SavePartyConfiguration" Content="Save Party Configuration"/>
+       
                 </DockPanel>
             </TabItem>
             <TabItem Header="Output">

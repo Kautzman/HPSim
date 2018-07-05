@@ -1,12 +1,14 @@
 # HPSim
 
-Healing Simulator for WoW.  SimCraft doesn't model healing well and I feel we need some of that.
+Healing Simulator for WoW.
+
+SimCraft doesn't model healing well and I feel we need some of that.
 
 Primary Goals:
 - Be able to effectively derive various healing metrics from custom fights definitions and custom healing strategies.
   - HPS, Efficiency, Identify 'problem areas' in your spec or strategy.
 - Create something that's more accessible for casual use than SimCraft.
-- Make the oupt easy to handle on a high level without sacrificing detailed reporting.
+- Make the output easy to handle on a high level without sacrificing detailed reporting.
 - Allow for rapid development iteration with smart infrastructure.
 
 Secondary Goals:
@@ -18,6 +20,8 @@ Secondary Goals:
 Features (Hopefully):
 - User-Definable Fight Definitions.
 - User-Definable AI / Strategy Definitions.
+  - Definitions can check against fight state / fight definitions for decision-making.
 - Scripting not required.  Define your strategy and fight through the UI.
 - Functional / Sexy UI.
 - User-Definable spells?  Maybe?
+

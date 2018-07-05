@@ -8,7 +8,7 @@ namespace BadSimCraft
 {
     class Scorch : DamagingSpell
     {
-        public Scorch() : base(2000, 10, 800)
+        public Scorch(Player target) : base(new SingleTarget(target), 0.733f, 2000, 10, 800)
         {
 
         }

@@ -2,7 +2,7 @@
 {
     class Meteor : DamagingSpell
     {
-        public Meteor() : base(3000, 0, 1000, 30000)
+        public Meteor(Player target) : base(new SingleTarget(target), 1.2f, 3000, 0, 1000, 30000)
         {
 
         }

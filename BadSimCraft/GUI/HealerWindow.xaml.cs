@@ -28,22 +28,22 @@ namespace BadSimCraft
 
         public void ReadFile()
         {
-            var lines = File.ReadAllLines("C:\\healertemp\\data.csv");
+            //var lines = File.ReadAllLines("C:\\healertemp\\data.csv");
 
-            var data = from l in lines.Skip(1)
-                       let split = l.Split(';')
-                       select new Party
-                       {
-                           Action = split[0],
-                           Time = split[1],
-                           Healer = split[2],
-                           Tank = split[3],
-                           DPS1 = split[4],
-                           DPS2 = split[5],
-                           DPS3 = split[6]
-                       };
+            //var data = from l in lines.Skip(1)
+            //           let split = l.Split(';')
+            //           select new Party
+            //           {
+            //               Action = split[0],
+            //               Time = split[1],
+            //               Healer = split[2],
+            //               Tank = split[3],
+            //               DPS1 = split[4],
+            //               DPS2 = split[5],
+            //               DPS3 = split[6]
+            //           };
 
-            HealerGrid.ItemsSource = data.ToList();
+            //HealerGrid.ItemsSource = data.ToList();
         }
     }
 }

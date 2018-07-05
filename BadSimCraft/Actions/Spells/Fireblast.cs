@@ -8,7 +8,7 @@ namespace BadSimCraft
 {
     class Fireblast : DamagingSpell
     {
-        public Fireblast() : base(0, 40, 300, 24000, false)
+        public Fireblast(Player target) : base(new SingleTarget(target), 0.66f, 0, 40, 300, 24000, false, false)
         {
 
         }

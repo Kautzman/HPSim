@@ -8,9 +8,7 @@ namespace BadSimCraft
 {
     class FrostfireBolt : DamagingSpell
     {
-        public static int damage = 1500;
-
-        public FrostfireBolt() : base(0, 0, damage, 12000)
+        public FrostfireBolt(Player target) : base(new SingleTarget(target), 0.833f, 0, 0, 1500, 12000)
         {
 
         }

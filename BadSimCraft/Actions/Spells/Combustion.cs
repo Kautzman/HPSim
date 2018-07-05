@@ -8,7 +8,8 @@ namespace BadSimCraft
 {
     class Combustion : BuffSpell
     {
-        public Combustion(Player player) : base(new SingleTarget(player), 0, 120000)
+        // CarlQuestion: I don't think this is right - Do we give the constructor a single Buff or a List of Buffs?
+        public Combustion(Player target) : base(GetEffects(), new SingleTarget(target), 0, 120000)
         {
 
         }

@@ -57,7 +57,12 @@
     <Compile Include="Actions\Action.cs" />
     <Compile Include="Actions\BuffSpell.cs" />
     <Compile Include="Actions\HealingSpell.cs" />
+    <Compile Include="Actions\Spells\CombustionBuff.cs" />
+    <Compile Include="Actions\TargetingStrategies\AreaOfEffect.cs" />
+    <Compile Include="Actions\TargetingStrategies\HealthComparison.cs" />
+    <Compile Include="Actions\TargetingStrategies\RaidAoE.cs" />
     <Compile Include="Actions\TargetingStrategies\SingleTarget.cs" />
+    <Compile Include="Actions\TargetingStrategies\SmartHealAoE.cs" />
     <Compile Include="Actions\TargetingStrategies\TargetableSpell.cs" />
     <Compile Include="Actions\TargetingStrategies\Targeted.cs" />
     <Compile Include="Actions\TargetingStrategies\TargetingStrategy.cs" />
@@ -93,7 +98,7 @@
     <Compile Include="Actions\Talents\OverheatBuff.cs" />
     <Compile Include="Actions\Talents\Pyromaniac.cs" />
     <Compile Include="Actions\Talents\PyromaniacBuff.cs" />
-    <Compile Include="Actions\Spells\CombustionEffect.cs" />
+    <Compile Include="Actions\SingleBuffEffect.cs" />
     <Compile Include="Actions\Spells\Combustion.cs" />
     <Compile Include="Actions\Cooldown.cs" />
     <Compile Include="Actions\Talents\EnlightenBuff.cs" />

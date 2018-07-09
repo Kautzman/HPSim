@@ -8,9 +8,9 @@ namespace BadSimCraft
 {
     abstract class BuffSpell : Spell
     {
+        BuffEffect buff;
 
-        Buff buff;
-        public BuffSpell(Buff thisBuff, TargetingStrategy thisTargetingStrategy, int thisCastTime, int thisCooldownDuration = 0,
+        public BuffSpell(BuffEffect thisBuff, TargetingStrategy thisTargetingStrategy, int thisCastTime, int thisCooldownDuration = 0,
             bool thisIsOnGCD = true, bool thisIsCooldownModifiedByHaste = false) :
             base (thisTargetingStrategy, thisCastTime, thisCooldownDuration, thisIsOnGCD, thisIsCooldownModifiedByHaste)
         {
@@ -19,7 +19,7 @@ namespace BadSimCraft
 
         public override List<Effect> GetEffects(Player player)
         {
-            return new List<Effect>() { new BuffEffect(this, buff) };
+            return new List<Effect>() { buff };
         }
     }
 }

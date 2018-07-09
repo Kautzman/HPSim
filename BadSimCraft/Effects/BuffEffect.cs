@@ -8,16 +8,16 @@ namespace BadSimCraft
 {
     class BuffEffect : Effect
     {
-        Buff buff;
+        List<Buff> buffs;
 
-        public BuffEffect(Action thisSource, Buff thisBuff) : base (thisSource)
+        public BuffEffect(Action thisSource, params Buff[] thisBuffs) : base (thisSource)
         {
-            buff = thisBuff;
+            buffs = thisBuffs.ToList();
         }
 
         public override void Apply(Player target)
         {
-            target.Take(buff);
+            buffs.ForEach(b => target.Take(b));
         }
     }
 }

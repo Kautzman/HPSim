@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace BadSimCraft
 {
-    public interface TargetingStrategy
+    class SingleBuffEffect : BuffEffect
     {
-        IEnumerable<Player> GetTargets();
+        public SingleBuffEffect(Buff thisBuff) : base(thisBuff)
+        {
+
+        }
     }
 }

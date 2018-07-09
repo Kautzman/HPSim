@@ -26,6 +26,8 @@ namespace BadSimCraft
         public bool hasOverheat { get; set; }
         public bool hasExtremeTemp { get; set; }
 
+        public int health { get; set; }
+
         public float mastery { get; set; }
         public float crit { get; set; }
         public float haste { get; set; }

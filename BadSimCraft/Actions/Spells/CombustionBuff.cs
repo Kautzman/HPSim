@@ -8,7 +8,7 @@ namespace BadSimCraft
 {
     class CombustionBuff : Buff
     {
-        public CombustionBuff() : base(10000)
+        public CombustionBuff() : base (10000)
         {
 
         }
